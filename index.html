@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória com Emojis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1><span>🎮</span> Jogo da Memória com Emojis <span>🧠</span></h1>
+    <div class="game-board" id="gameBoard"></div>
+    <audio id="clickSound" src="click.mp3"></audio> <!-- Adicione o caminho do arquivo de som aqui -->
+    <audio id="errorSound" src="error.mp3"></audio> <!-- Adicione o caminho do arquivo de som aqui -->
+    <audio id="successSound" src="success.mp3"></audio> <!-- Adicione o caminho do arquivo de som aqui -->
+    <audio id="celebrationSound" src="celebration.mp3"></audio> <!-- Adicione o caminho do arquivo de som aqui -->
+    <audio id="backgroundMusic" src="background.mp3" loop></audio> <!-- Adicione o caminho do arquivo de música de fundo aqui -->
+    <div id="congratulations" class="hidden">
+        <h2>Parabéns!</h2>
+        <p id="motivationalMessage"></p>
+    </div>
+    <div class="volume-controls">
+        <button id="muteButton">🔇</button>
+        <button id="volumeButton" class="hidden">🔊</button>
+        <button id="menuButton">☰</button>
+    </div>
+    <div id="soundMenu" class="hidden">
+        <ul>
+            <li>Som de Clique <button class="muteSound" data-sound="clickSound">🔇</button><button class="volumeSound hidden" data-sound="clickSound">🔊</button></li>
+            <li>Som de Erro <button class="muteSound" data-sound="errorSound">🔇</button><button class="volumeSound hidden" data-sound="errorSound">🔊</button></li>
+            <li>Som de Sucesso <button class="muteSound" data-sound="successSound">🔇</button><button class="volumeSound hidden" data-sound="successSound">🔊</button></li>
+            <li>Som de Comemoração <button class="muteSound" data-sound="celebrationSound">🔇</button><button class="volumeSound hidden" data-sound="celebrationSound">🔊</button></li>
+            <li>Música de Fundo <button class="muteSound" data-sound="backgroundMusic">🔇</button><button class="volumeSound hidden" data-sound="backgroundMusic">🔊</button></li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
